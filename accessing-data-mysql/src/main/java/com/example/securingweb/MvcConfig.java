@@ -15,12 +15,11 @@ public class MvcConfig implements WebMvcConfigurer {
 		registry.addViewController("/").setViewName("thymeleaf/home"); // 시작페이지 url을 /가 아닌 home으로 바꿔줌
 		registry.addViewController("/hello").setViewName("thymeleaf/hello");
 		registry.addViewController("/login").setViewName("thymeleaf/login");
-		// registry.addViewController("/welcome1").setViewName("thymeleaf/welcome1");
+		registry.addViewController("/welcome1").setViewName("thymeleaf/welcome1");
 	}
 	
 	@RequestMapping("/welcome2")
 	public String welcome() { 
-		return "welcome"; 
+		return "welcome";
 	}
-
 }
