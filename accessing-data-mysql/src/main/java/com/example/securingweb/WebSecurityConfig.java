@@ -17,12 +17,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http
 			.authorizeRequests()
-				.antMatchers("/", "/home").permitAll()
+				.antMatchers("/", "/home", "/welcome1", "/welcome2").permitAll() // /랑 home은 인증제한없음
 				.anyRequest().authenticated()
 				.and()
 			.formLogin()
-				.loginPage("/login")
-				.permitAll()
+				.loginPage("/login") // 로그인 페이지
+				.permitAll() // 로그인 페이지 아무나 볼 수 있음
 				.and()
 			.logout()
 				.permitAll();
