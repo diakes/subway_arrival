@@ -1,4 +1,4 @@
-package com.example.springboot;
+package com.example.accessingdatamysql;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
